@@ -2,7 +2,10 @@
 
 class Pays {
 
-    private string $nomPays;
+    private string $_nomPays;
+    private array $_equipes;
+    private array $_joueurs;
+
     
 
 }
