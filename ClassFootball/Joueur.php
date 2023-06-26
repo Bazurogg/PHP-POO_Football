@@ -9,7 +9,7 @@
         private array $_nationalite;
         
         public function __construct($prenom, $nom, $dateNaissance){
-        
+            
             $this -> _prenom = $prenom;
             $this -> _nom = $nom;
             $this -> _dateNaissance = $dateNaissance;

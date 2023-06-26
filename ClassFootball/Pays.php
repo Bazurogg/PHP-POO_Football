@@ -7,7 +7,7 @@ class Pays {
     private array $_mercato;
 
  
-    public function __construct($nomPays, $_dateCreation) {
+    public function __construct($nomPays) {
    
         $this -> _nomPays = $nomPays;
         $this -> _equipes = [];
@@ -28,9 +28,11 @@ class Pays {
     }
     
     public function afficherEquipe() {
+
         foreach ($this -> _equipes as $equipe) {
             echo $equipe; 
         }
+        
     }
 
     public function ajouterEquipe(Equipe $equipe) {
