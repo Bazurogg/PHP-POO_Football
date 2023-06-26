@@ -4,14 +4,14 @@ class Pays {
 
     private string $_nomPays;
     private array $_equipes;
-    private array $_contrats;
+    private array $_mercato;
 
  
     public function __construct($nomPays, $_dateCreation) {
    
         $this -> _nomPays = $nomPays;
         $this -> _equipes = [];
-        $this -> _contrats = [];
+        $this -> _mercato = [];
 
     }
     
@@ -39,9 +39,9 @@ class Pays {
 
     }
     
-    public function ajouterContrat(Contrat $contrat) {
+    public function ajouterContrat(Mercato $mercato) {
 
-        $this -> _contrats[] = $contrat;
+        $this -> _mercato[] = $mercato;
 
     }
 

@@ -5,14 +5,16 @@
         private string $_nom;
         private string $_prenom;
         private string $_dateNaissance;
-        private string $_nationalite;
-        private array $_contrats;
+        private array $_mercato;
+        private array $_nationalite;
         
-        public function __construct($prenom, $nom, $dateNaissance, $nationalite){
+        public function __construct($prenom, $nom, $dateNaissance){
         
             $this -> _prenom = $prenom;
             $this -> _nom = $nom;
-            $this -> _contrats = [];
+            $this -> _dateNaissance;
+            $this -> _mercato = [];
+            $this -> _nationalite = [];
             
         }
 
@@ -32,11 +34,6 @@
         
         }
         
-        public function setNationalite($nationalite) {
-
-            $this -> _nationalite = $nationalite;
-        
-        }
 
         public function getPrenom() {
             
@@ -56,25 +53,21 @@
     
         }
         
-        public function getNationalite() {
-    
-            return $this -> _nationalite;
-    
-        }
 
-        public function ajouterContrat(Contrat $contrat) {
+        public function ajouterContrat(Mercato $mercato) {
             
-            $this -> _contrats[] = $contrat;
+            $this -> _mercato[] = $mercato;
 
         }
 
         public function getAge() {
             $today = new DateTime(date('m.d.y'));
+            $diff = $today -> diff();
         }
 
         public function afficherContrat() {
 
-            echo "<p>" . strtoupper($this -> getPrenom()) . " " . strtoupper($this -> getNom()) . "<br>" . $this -> getNationalite() . " - " . //resultat calcul age joueur;
+            echo "<p>" . strtoupper($this -> getPrenom()) . " " . strtoupper($this -> getNom()) . "<br>" . $this -> getNationalite() . " - " . $this -> getAge();
 
         }
 

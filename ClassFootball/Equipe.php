@@ -5,7 +5,7 @@ class Equipe {
     private Pays $_pays;
     private string $_nomEquipe;
     private string $_dateCreation;
-    private array $_contrats;
+    private array $_mercato;
 
     public function __construct(Pays $pays, $nomEquipe, $dateCreation) {
 
@@ -13,7 +13,7 @@ class Equipe {
         $this -> _pays = $pays;
         $this -> _nomEquipe = $nomEquipe;
         $this -> _dateCreation = $dateCreation;
-        $this -> _contrats = [];
+        $this -> _mercato = [];
         
     }
 
@@ -47,9 +47,9 @@ class Equipe {
 
     }
     
-    public function ajouterContrat (Contrat $contrat) {
+    public function ajouterContrat (Mercato $mercato) {
         
-        $this -> _contrats[] = $contrat;
+        $this -> _mercato[] = $mercato;
     }
 
     public function __toString() {
