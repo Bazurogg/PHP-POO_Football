@@ -1,6 +1,6 @@
 <?php
 
-class Contrat {
+class Mercato {
 
     private string $_anneeDebut;
     private Joueur $_joueur;
@@ -11,10 +11,10 @@ class Contrat {
         $this -> _joueur = $joueur;
         $this -> _equipe = $equipe;
         $this -> _anneeDebut = $_anneeDebut;
-        $joueur -> ajouterContrat($this);
-        $equipe -> ajouterContrat($this);
+        $joueur -> ajouterTransfert($this);
+        $equipe -> ajouterTransfert($this);
         $pays = $equipe -> getPays();
-        $pays -> ajouterContrat($this);
+        $pays -> ajouterTransfert($this);
 
     }
 

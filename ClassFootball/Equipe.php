@@ -47,7 +47,7 @@ class Equipe {
 
     }
     
-    public function ajouterContrat (Mercato $mercato) {
+    public function ajouterTransfert (Mercato $mercato) {
         
         $this -> _mercato[] = $mercato;
     }

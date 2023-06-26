@@ -12,7 +12,7 @@
         
             $this -> _prenom = $prenom;
             $this -> _nom = $nom;
-            $this -> _dateNaissance;
+            $this -> _dateNaissance = $dateNaissance;
             $this -> _mercato = [];
             $this -> _nationalite = [];
             
@@ -28,7 +28,7 @@
             $this -> _nom = $nom;
         }
 
-        public function setDatNaissance($dateNaissance) {
+        public function setDateNaissance($dateNaissance) {
 
             $this -> _dateNaissance = $dateNaissance;
         
@@ -47,27 +47,37 @@
     
         }
         
-        public function getDateNaisance() {
+        public function getDateNaissance() {
     
             return $this -> _dateNaissance;
     
         }
         
-
-        public function ajouterContrat(Mercato $mercato) {
+        public function ajouterTransfert(Mercato $mercato) {
             
             $this -> _mercato[] = $mercato;
 
         }
+        
+        public function ajouterNationalite(Nationalite $nationalite) {
+            
+            $this -> _nationalite[] = $nationalite;
+
+        }
 
         public function getAge() {
+
+            $dateBirth = new DateTime($this -> getDateNaissance());
             $today = new DateTime(date('m.d.y'));
-            $diff = $today -> diff();
+            $diff = $today -> diff($dateBirth) -> y;
+
+            return $diff;
+
         }
 
         public function afficherContrat() {
 
-            echo "<p>" . strtoupper($this -> getPrenom()) . " " . strtoupper($this -> getNom()) . "<br>" . $this -> getNationalite() . " - " . $this -> getAge();
+            echo "<p>" . strtoupper($this -> getPrenom()) . " " . strtoupper($this -> getNom()) . "<br>" . " - " . $this -> getAge();
 
         }
 
