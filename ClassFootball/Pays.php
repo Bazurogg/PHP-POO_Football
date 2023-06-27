@@ -4,7 +4,6 @@ class Pays {
 
     private string $_nomPays;
     private array $_equipes;
-    private array $_mercato;
     private array $_resident;
 
  
@@ -12,7 +11,6 @@ class Pays {
    
         $this -> _nomPays = $nomPays;
         $this -> _equipes = [];
-        $this -> _mercato = [];
         $this -> _resident = [];
 
     }
@@ -33,12 +31,6 @@ class Pays {
     public function ajouterEquipe(Equipe $equipe) {
         
         $this -> _equipes [] = $equipe;
-
-    }
-    
-    public function ajouterTransfert(Mercato $mercato) {
-
-        $this -> _mercato [] = $mercato;
 
     }
     

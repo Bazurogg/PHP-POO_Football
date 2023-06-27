@@ -13,8 +13,8 @@ class Mercato {
         $this -> _anneeDebut = $_anneeDebut;
         $joueur -> ajouterTransfert($this);
         $equipe -> ajouterJoueur($this);
-        $pays = $equipe -> getPays();
-        $pays -> ajouterTransfert($this);
+        // $pays = $equipe -> getPays();
+        // $pays -> ajouterTransfert($this);
 
     }
 
