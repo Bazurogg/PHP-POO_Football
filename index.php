@@ -4,7 +4,6 @@ require 'classFootball/Pays.php';
 require 'classFootball/Equipe.php';
 require 'classFootball/Joueur.php';
 require 'classFootball/Mercato.php';
-require 'classFootball/Nationalite.php';
 
 $pays01 = new Pays("France");
 $pays02 = new Pays("Espagne"); 
@@ -28,7 +27,6 @@ $joueur05 = new Joueur("Dimitri", "Payet", "29-03-1987", $pays01);
 
 $transfert01 = new Mercato($joueur01, $equipe01, "2017");
 $transfert02 = new Mercato($joueur03, $equipe01, "2021");
-$transfert03 = new Mercato($joueur01, $equipe04, "2023");
 
 ?>
 
