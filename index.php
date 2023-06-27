@@ -4,6 +4,7 @@ require 'classFootball/Pays.php';
 require 'classFootball/Equipe.php';
 require 'classFootball/Joueur.php';
 require 'classFootball/Mercato.php';
+require 'classFootball/Nationalite.php';
 
 $pays01 = new Pays("France");
 $pays02 = new Pays("Espagne"); 
