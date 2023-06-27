@@ -5,6 +5,7 @@ class Pays {
     private string $_nomPays;
     private array $_equipes;
     private array $_mercato;
+    private array $_resident;
 
  
     public function __construct($nomPays) {
@@ -12,6 +13,7 @@ class Pays {
         $this -> _nomPays = $nomPays;
         $this -> _equipes = [];
         $this -> _mercato = [];
+        $this -> _resident = [];
 
     }
     
@@ -27,16 +29,9 @@ class Pays {
     
     }
     
-    public function afficherEquipe() {
-
-        foreach ($this -> _equipes as $equipe) {
-            echo $equipe; 
-        }
-        
-    }
-
+    
     public function ajouterEquipe(Equipe $equipe) {
-
+        
         $this -> _equipes [] = $equipe;
 
     }
@@ -46,10 +41,32 @@ class Pays {
         $this -> _mercato [] = $mercato;
 
     }
+    
+    public function ajouterJoueur(Joueur $joueur) {
+
+        $this -> _resident [] = $joueur;
+        
+    }
+    
+    public function afficherEquipe() {
+        echo "<h2>" . $this -> getNomPays() ." :" . "</h2>";
+        foreach ($this -> _equipes as $equipe) {
+            echo $equipe . "<br>"; 
+        }
+        
+    }
+    
+    public function afficherResident() {
+        echo "<h2>" . $this -> getNomPays() ." :" . "</h2>";
+        foreach ($this -> _resident as $resident) {
+            echo $resident . "<br>"; 
+        }
+        
+    }
 
     public function __toString() {
 
-        return "<span>" . $this -> getNomPays() . "</span><br>";
+        return "<span>" . $this -> getNomPays() . "</span>";
         
     }
 }

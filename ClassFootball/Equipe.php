@@ -6,6 +6,7 @@ class Equipe {
     private string $_nomEquipe;
     private string $_dateCreation;
     private array $_mercato;
+    private array $_effectif;
 
     public function __construct(Pays $pays, $nomEquipe, $dateCreation) {
 
@@ -14,6 +15,7 @@ class Equipe {
         $this -> _nomEquipe = $nomEquipe;
         $this -> _dateCreation = $dateCreation;
         $this -> _mercato = [];
+        $this -> _effectif = [];
         
     }
 
@@ -50,6 +52,21 @@ class Equipe {
     public function ajouterTransfert (Mercato $mercato) {
         
         $this -> _mercato[] = $mercato;
+
+    }
+    
+    public function ajouterJoueur (Mercato $joueur) {
+        
+        $this -> _effectif[] = $joueur;
+
+    }
+    
+    public function afficherEffectif() {
+        echo "<h2>" . $this -> getNomEquipe() . "</h2>" . "<p>" . $this -> getPays() . " - " . $this -> getDateCreation() . "</p>";
+        foreach ($this -> _effectif as $joueur) {
+            echo $joueur; 
+        }
+        
     }
 
     public function __toString() {

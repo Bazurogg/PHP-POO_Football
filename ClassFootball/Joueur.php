@@ -5,16 +5,18 @@
         private string $_nom;
         private string $_prenom;
         private string $_dateNaissance;
+        private Pays $_pays;
         private array $_mercato;
-        private array $_nationalite;
         
-        public function __construct($prenom, $nom, $dateNaissance){
+        
+        public function __construct($prenom, $nom, $dateNaissance, Pays $pays){
             
             $this -> _prenom = $prenom;
             $this -> _nom = $nom;
+            $this -> _pays = $pays;
             $this -> _dateNaissance = $dateNaissance;
+            $pays -> ajouterJoueur($this);
             $this -> _mercato = [];
-            $this -> _nationalite = [];
             
         }
 
@@ -46,6 +48,12 @@
             return $this -> _nom;
     
         }
+    
+        public function getPays() {
+
+            return $this->_pays;
+
+        }
         
         public function getDateNaissance() {
     
@@ -59,12 +67,6 @@
 
         }
         
-        public function ajouterNationalite(Nationalite $nationalite) {
-            
-            $this -> _nationalite[] = $nationalite;
-
-        }
-
         public function getAge() {
 
             $dateBirth = new DateTime($this -> getDateNaissance());
@@ -75,15 +77,18 @@
 
         }
 
-        public function afficherContrat() {
+        public function afficherRecapJoueur() {
 
-            echo "<p>" . strtoupper($this -> getPrenom()) . " " . strtoupper($this -> getNom()) . "<br>" . " - " . $this -> getAge();
+            echo "<strong>" . $this -> getPrenom() . " " . $this -> getNom() . "</strong><br>" . $this -> getPays() . " - " . $this -> getAge() . " ans. <br>";
+            foreach ($this -> _mercato as $mercato) {
+                echo $mercato -> getEquipe() -> getNomEquipe() . " (" . $mercato -> getAnneeDebut() . ")<br>";
+            }
 
         }
 
         public function __toString() {
 
-            return strtoupper($this -> getPrenom()) . " " . strtoupper($this -> getNom());
+            return ($this -> getPrenom()) . " " . strtoupper($this -> getNom());
     
         }
     

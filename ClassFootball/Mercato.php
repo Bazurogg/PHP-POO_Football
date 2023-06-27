@@ -12,7 +12,7 @@ class Mercato {
         $this -> _equipe = $equipe;
         $this -> _anneeDebut = $_anneeDebut;
         $joueur -> ajouterTransfert($this);
-        $equipe -> ajouterTransfert($this);
+        $equipe -> ajouterJoueur($this);
         $pays = $equipe -> getPays();
         $pays -> ajouterTransfert($this);
 
@@ -44,7 +44,7 @@ class Mercato {
 
     public function __toString() {
 
-        return "<p>" . $this -> getJoueur() . $this -> getEquipe() . " (" . $this -> getAnneeDebut() . ")</p>";
+        return "<p>" . $this -> getJoueur() . " (" . $this -> getAnneeDebut() . ")</p>";
 
     }
 
