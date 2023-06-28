@@ -9,6 +9,7 @@
         {
             $this -> _joueur = $joueur;
             $this -> _pays = $pays;
+            $joueur -> ajouterNationalite($this);
         }
 
         public function getJoueur()
