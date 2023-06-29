@@ -270,11 +270,13 @@ $transfert09 = new Mercato($joueur15, $equipe05, "2019");
 
         <div class="joueur-box">
 
-            <div class="photojoueur-box">
+            <a href="https://fr.wikipedia.org/wiki/Kylian_Mbapp%C3%A9" target="_blank">
+                <div class="photojoueur-box">
 
-                <img src="/Annexe/IMG/joueur/K_Mbappe.png" class="photo-joueur" alt="photo kylian Mbappe">
+                    <img src="/Annexe/IMG/joueur/K_Mbappe.png" class="photo-joueur" alt="photo kylian Mbappe">
 
-            </div>
+                </div>
+            </a>
 
             <div class="joueurrecap-box">
 
@@ -288,11 +290,15 @@ $transfert09 = new Mercato($joueur15, $equipe05, "2019");
 
         <div class="joueur-box">
 
-            <div class="photojoueur-box">
+            <a href="https://fr.wikipedia.org/wiki/Lionel_Messi" target="_blank">
 
-                <img src="/Annexe/IMG/joueur/L_Messi.png" class="photo-joueur" alt="photo kylian Mbappe">
+                <div class="photojoueur-box">
 
-            </div>
+                    <img src="/Annexe/IMG/joueur/L_Messi.png" class="photo-joueur" alt="photo kylian Mbappe">
+
+                </div>
+
+            </a>
 
             <div class="joueurrecap-box">
 

@@ -106,10 +106,12 @@ img.logofed {
 
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
     width: 250px;
     height: auto;
-    border: solid 1px white;
+    border: solid 1px rgba(255, 255, 255, 0.526);
+    transition: 0.8s;
     padding-top: 10px;
     border-radius: 15px;
     box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.32), inset -6px -6px 10px 0 rgba(77, 77, 77, 0.264);
@@ -120,6 +122,12 @@ img.logofed {
     display: flex;
     justify-content: center;
     align-items: center;
+
+}
+
+.joueur-box:hover {
+    transform: translateY(-10px);
+    border: solid 1px white;
 }
 
 img.photo-joueur {
