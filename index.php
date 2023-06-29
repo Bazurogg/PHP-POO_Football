@@ -15,6 +15,8 @@ $pays06 = new Pays("Allemagne");
 $pays07 = new Pays("Bresil");
 $pays08 = new Pays("Chili");
 $pays09 = new Pays("Pologne");
+$pays10 = new Pays("Norvege");
+$pays11 = new Pays("Portugal");
 
 
 $equipe01 = new Equipe($pays01, "PSG", "1970");
@@ -27,7 +29,7 @@ $equipe07 = new Equipe($pays01, "OM", "1899");
 $equipe08 = new Equipe($pays06, "Bayern Munich", "1900");
 $equipe09 = new Equipe($pays03, "Arsenal", "1886");
 $equipe10 = new Equipe($pays04, "Milan AC", "1899");
-$equipe11 = new Equipe($pays04, "Milan AC", "1899");
+$equipe11 = new Equipe($pays03, "Manchester City", "1880");
 
 
 $joueur01 = new Joueur("Kylian", "Mbappe", "20-12-1998");     
@@ -41,6 +43,10 @@ $joueur08 = new Joueur("Ousmane", "Dembele", "15-05-1997");
 $joueur09 = new Joueur("Robert", "Lewandowski", "21-08-1988");
 $joueur10 = new Joueur("Zinedine", "Zidane", "23-06-1972");
 $joueur11 = new Joueur("Marcus", "Rashford", "31-09-1997");
+$joueur12 = new Joueur("Raphael", "Varane", "25-04-1993");
+$joueur13 = new Joueur("Erling", "Haaland", "20-07-2000");
+$joueur14 = new Joueur("Karim", "Benzema", "19-12-1987");
+
 
 $nationalite01 = new Nationalite($joueur06, $pays01);
 $nationalite02 = new Nationalite($joueur06, $pays02);
@@ -49,6 +55,12 @@ $nationalite04 = new Nationalite($joueur01, $pays01);
 $nationalite05 = new Nationalite($joueur04, $pays07);
 $nationalite06 = new Nationalite($joueur08, $pays01);
 $nationalite07 = new Nationalite($joueur09, $pays09);
+$nationalite08 = new Nationalite($joueur10, $pays01);
+$nationalite09 = new Nationalite($joueur11, $pays03);
+$nationalite10 = new Nationalite($joueur12, $pays01);
+$nationalite11 = new Nationalite($joueur13, $pays01);
+$nationalite11 = new Nationalite($joueur14, $pays01);
+$nationalite11 = new Nationalite($joueur02, $pays11);
 
 $transfert01 = new Mercato($joueur01, $equipe01, "2017");
 $transfert02 = new Mercato($joueur03, $equipe01, "2021");
@@ -61,6 +73,11 @@ $transfert07 = new Mercato($joueur09, $equipe03, "2022");
 $transfert08 = new Mercato($joueur02, $equipe04, "2009");
 $transfert09 = new Mercato($joueur10, $equipe04, "2001");
 $transfert10 = new Mercato($joueur11, $equipe05, "2023");
+$transfert10 = new Mercato($joueur12, $equipe05, "2021");
+$transfert10 = new Mercato($joueur13, $equipe11, "2021");
+$transfert10 = new Mercato($joueur14, $equipe04, "2009");
+$transfert08 = new Mercato($joueur02, $equipe05, "2021");
+
 
 ?>
 
@@ -235,7 +252,7 @@ $transfert10 = new Mercato($joueur11, $equipe05, "2023");
             <div class="teamrecap-text">
                 
                 <?php
-                    $equipe06 -> afficherEffectif();
+                    $equipe11 -> afficherEffectif();
                 ?>
 
             </div>
@@ -244,15 +261,100 @@ $transfert10 = new Mercato($joueur11, $equipe05, "2023");
     
     </div>
 
-    <?php
+    <div class="joueur-container">
 
-    $joueur01 -> afficherRecapJoueur();
-    echo "<br>";
-    $joueur03 -> afficherRecapJoueur();
-    echo "<br>";
-    $joueur06 -> afficherRecapJoueur();
+        <div class="joueur-box">
 
-    ?>
+            <div class="photojoueur-box">
+
+                <img src="/Annexe/IMG/joueur/K_Mbappe.png" class="photo-joueur" alt="photo kylian Mbappe">
+
+            </div>
+
+            <div class="joueurrecap-box">
+
+                <?php
+                    $joueur01 -> afficherRecapJoueur();
+                ?>
+
+            </div>
+
+        </div>
+
+        <div class="joueur-box">
+
+            <div class="photojoueur-box">
+
+                <img src="/Annexe/IMG/joueur/L_Messi.png" class="photo-joueur" alt="photo kylian Mbappe">
+
+            </div>
+
+            <div class="joueurrecap-box">
+
+                <?php
+                    $joueur03 -> afficherRecapJoueur();
+                ?>
+
+            </div>
+
+        </div>
+        
+        <div class="joueur-box">
+
+            <div class="photojoueur-box">
+
+                <img src="/Annexe/IMG/joueur/L_Hernandez.png" class="photo-joueur" alt="photo kylian Mbappe">
+
+            </div>
+
+            <div class="joueurrecap-box">
+
+                <?php
+                    $joueur06 -> afficherRecapJoueur();
+                ?>
+
+            </div>
+
+        </div>
+
+        <div class="joueur-box">
+
+            <div class="photojoueur-box">
+
+                <img src="/Annexe/IMG/joueur/K_Benzema.png" class="photo-joueur" alt="photo karim benzema">
+
+            </div>
+
+            <div class="joueurrecap-box">
+
+                <?php
+                    $joueur14 -> afficherRecapJoueur();
+                ?>
+
+            </div>
+
+        </div>
+        
+        <div class="joueur-box">
+
+            <div class="photojoueur-box">
+
+                <img src="/Annexe/IMG/joueur/C_Ronaldo.png" class="photo-joueur" alt="photo christiano ronaldo">
+
+            </div>
+
+            <div class="joueurrecap-box">
+
+                <?php
+                    $joueur02 -> afficherRecapJoueur();
+                ?>
+
+            </div>
+
+        </div>
+
+    </div>
+
 
 </div>
     
