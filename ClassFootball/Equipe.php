@@ -63,6 +63,7 @@ class Equipe {
     
     public function afficherEffectif() {
         echo "<h2>" . $this -> getNomEquipe() . "</h2>" . "<p>" . $this -> getPays() . " - " . $this -> getDateCreation() . "</p>";
+        echo "<br>";
         foreach ($this -> _effectif as $joueur) {
             echo $joueur; 
         }

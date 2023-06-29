@@ -12,6 +12,10 @@ $pays03 = new Pays("Angleterre");
 $pays04 = new Pays("Italie");
 $pays05 = new Pays("Argentine");
 $pays06 = new Pays("Allemagne");
+$pays07 = new Pays("Bresil");
+$pays08 = new Pays("Chili");
+$pays09 = new Pays("Pologne");
+
 
 $equipe01 = new Equipe($pays01, "PSG", "1970");
 $equipe02 = new Equipe($pays01, "Racing Club Stras", "1906");
@@ -21,21 +25,43 @@ $equipe05 = new Equipe($pays03, "Manchester United", "1878");
 $equipe06 = new Equipe($pays04, "Juventus", "1897");
 $equipe07 = new Equipe($pays01, "OM", "1899");
 $equipe08 = new Equipe($pays06, "Bayern Munich", "1900");
+$equipe09 = new Equipe($pays03, "Arsenal", "1886");
+$equipe10 = new Equipe($pays04, "Milan AC", "1899");
+$equipe11 = new Equipe($pays04, "Milan AC", "1899");
 
 
 $joueur01 = new Joueur("Kylian", "Mbappe", "20-12-1998");     
-// $joueur02 = new Joueur("Christiano", "Ronaldo", "5-02-1985"); 
+$joueur02 = new Joueur("Christiano", "Ronaldo", "5-02-1985"); 
 $joueur03 = new Joueur("Lionel", "Messi", "24-06-1987");
-// $joueur04 = new Joueur("Neymar", "da Silva Santos", "2-02-1992" );
+$joueur04 = new Joueur("Neymar", "Jr", "2-02-1992" );
 $joueur05 = new Joueur("Dimitri", "Payet", "29-03-1987");
 $joueur06 = new Joueur("Lucas", "Hernandez", "14-02-1996");
+$joueur07 = new Joueur("Alexis", "Sanchez", "19-12-1988");
+$joueur08 = new Joueur("Ousmane", "Dembele", "15-05-1997");
+$joueur09 = new Joueur("Robert", "Lewandowski", "21-08-1988");
+$joueur10 = new Joueur("Zinedine", "Zidane", "23-06-1972");
+$joueur11 = new Joueur("Marcus", "Rashford", "31-09-1997");
 
 $nationalite01 = new Nationalite($joueur06, $pays01);
 $nationalite02 = new Nationalite($joueur06, $pays02);
+$nationalite03 = new Nationalite($joueur03, $pays05);
+$nationalite04 = new Nationalite($joueur01, $pays01);
+$nationalite05 = new Nationalite($joueur04, $pays07);
+$nationalite06 = new Nationalite($joueur08, $pays01);
+$nationalite07 = new Nationalite($joueur09, $pays09);
 
 $transfert01 = new Mercato($joueur01, $equipe01, "2017");
 $transfert02 = new Mercato($joueur03, $equipe01, "2021");
-$transfert03 = new Mercato($joueur06, $equipe08, "2019")
+$transfert03 = new Mercato($joueur06, $equipe08, "2019");
+$transfert04 = new Mercato($joueur04, $equipe01, "2017");
+$transfert05 = new Mercato($joueur05, $equipe07, "2013");
+$transfert05 = new Mercato($joueur07, $equipe07, "2022");
+$transfert06 = new Mercato($joueur08, $equipe03, "2017");
+$transfert07 = new Mercato($joueur09, $equipe03, "2022");
+$transfert08 = new Mercato($joueur02, $equipe04, "2009");
+$transfert09 = new Mercato($joueur10, $equipe04, "2001");
+$transfert10 = new Mercato($joueur11, $equipe05, "2023");
+
 ?>
 
 <!DOCTYPE html>
@@ -45,20 +71,190 @@ $transfert03 = new Mercato($joueur06, $equipe08, "2019")
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP/POO - Football</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
+<div class="master-container">
 
-<?php
+    <div class="nation-container">
+        
+        <div class="nation-box">
+    
+            <div class="team-box">
+    
+                <div class="logofed-box">
+                    <img class="logofed"src="/Annexe/IMG/logo/FIFA_FR.png" alt="france fifa logo">
+                </div>
+    
+                <div class="team-txt">
+    
+                    <?php
+                    $pays01 -> afficherEquipe();
+                    ?>
+    
+                </div>
+    
+            </div>
+    
+        </div>
+        
+        <div class="nation-box">
+    
+            <div class="team-box">
+    
+                <div class="logofed-box">
+                    <img class="logofed" src="/Annexe/IMG/logo/FIFA_SP.png" alt="spain fifa logo">
+                </div>
+    
+                <div class="team-txt">
+    
+                    <?php
+                    $pays02 -> afficherEquipe();
+                    ?>
+    
+                </div>
+    
+            </div>
+    
+        </div>
 
-$pays01 -> afficherEquipe();
-$equipe01 -> afficherEffectif();
-$joueur01 -> afficherRecapJoueur();
-echo "<br>";
-$joueur03 -> afficherRecapJoueur();
-echo "<br>";
-$joueur06 -> afficherRecapJoueur();
-?>
+        <div class="nation-box">
+    
+            <div class="team-box">
+    
+                <div class="logofed-box">
+                    <img class="logofed"src="/Annexe/IMG/logo/FIFA_ENG.png" alt="england fifa logo">
+                </div>
+    
+                <div class="team-txt">
+    
+                    <?php
+                    $pays03 -> afficherEquipe();
+                    ?>
+    
+                </div>
+    
+            </div>
+    
+        </div>
+
+        <div class="nation-box">
+    
+            <div class="team-box">
+    
+                <div class="logofed-box">
+                    <img class="logofed"src="/Annexe/IMG/logo/FIFA_ITA.png" alt="italy fifa logo">
+                </div>
+    
+                <div class="team-txt">
+    
+                    <?php
+                    $pays04 -> afficherEquipe();
+                    ?>
+    
+                </div>
+    
+            </div>
+    
+        </div>
+
+    </div>
+
+    <div class="team-container">
+
+        <div class="teamrecap-box">
+
+            <div class="teamrecap-text">
+
+                <?php
+                    $equipe01 -> afficherEffectif();
+                ?>
+
+            </div>
+
+
+        </div>
+
+        <div class="teamrecap-box">
+
+        
+            <div class="teamrecap-text">
+                
+                <?php
+                    $equipe07 -> afficherEffectif();
+                ?>
+
+            </div>
+
+
+        </div>
+
+        <div class="teamrecap-box">
+
+            <div class="teamrecap-text">
+                
+                <?php
+                    $equipe03 -> afficherEffectif();
+                ?>
+
+            </div>
+
+
+        </div>
+
+        <div class="teamrecap-box">
+
+            <div class="teamrecap-text">
+                
+                <?php
+                    $equipe04 -> afficherEffectif();
+                ?>
+
+            </div>
+
+        </div>
+        
+        <div class="teamrecap-box">
+
+            <div class="teamrecap-text">
+                
+                <?php
+                    $equipe05 -> afficherEffectif();
+                ?>
+
+            </div>
+
+        </div>
+        
+        <div class="teamrecap-box">
+
+            <div class="teamrecap-text">
+                
+                <?php
+                    $equipe06 -> afficherEffectif();
+                ?>
+
+            </div>
+
+        </div>
+    
+    </div>
+
+    <?php
+
+    $joueur01 -> afficherRecapJoueur();
+    echo "<br>";
+    $joueur03 -> afficherRecapJoueur();
+    echo "<br>";
+    $joueur06 -> afficherRecapJoueur();
+
+    ?>
+
+</div>
     
 </body>
 
