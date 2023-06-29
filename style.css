@@ -9,6 +9,7 @@ html {
 
     font-family: "Poppins";
     color: white;
+    padding: 20px;
 
 }
 
@@ -110,7 +111,8 @@ img.logofed {
     height: auto;
     border: solid 1px white;
     padding-top: 10px;
-    border-radius: 10px;
+    border-radius: 15px;
+    box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.32), inset -6px -6px 10px 0 rgba(77, 77, 77, 0.264);
 
 }
 

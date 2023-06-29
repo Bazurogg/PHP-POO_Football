@@ -17,6 +17,8 @@ $pays08 = new Pays("Chili");
 $pays09 = new Pays("Pologne");
 $pays10 = new Pays("Norvege");
 $pays11 = new Pays("Portugal");
+$pays12 = new Pays("Belgique");
+
 
 
 $equipe01 = new Equipe($pays01, "PSG", "1970");
@@ -46,6 +48,7 @@ $joueur11 = new Joueur("Marcus", "Rashford", "31-09-1997");
 $joueur12 = new Joueur("Raphael", "Varane", "25-04-1993");
 $joueur13 = new Joueur("Erling", "Haaland", "20-07-2000");
 $joueur14 = new Joueur("Karim", "Benzema", "19-12-1987");
+$joueur15 = new Joueur("Eden", "Hazard", "19-12-1987");
 
 
 $nationalite01 = new Nationalite($joueur06, $pays01);
@@ -59,8 +62,9 @@ $nationalite08 = new Nationalite($joueur10, $pays01);
 $nationalite09 = new Nationalite($joueur11, $pays03);
 $nationalite10 = new Nationalite($joueur12, $pays01);
 $nationalite11 = new Nationalite($joueur13, $pays01);
-$nationalite11 = new Nationalite($joueur14, $pays01);
-$nationalite11 = new Nationalite($joueur02, $pays11);
+$nationalite12 = new Nationalite($joueur14, $pays01);
+$nationalite13 = new Nationalite($joueur02, $pays11);
+$nationalite14 = new Nationalite($joueur15, $pays12);
 
 $transfert01 = new Mercato($joueur01, $equipe01, "2017");
 $transfert02 = new Mercato($joueur03, $equipe01, "2021");
@@ -77,6 +81,7 @@ $transfert10 = new Mercato($joueur12, $equipe05, "2021");
 $transfert10 = new Mercato($joueur13, $equipe11, "2021");
 $transfert10 = new Mercato($joueur14, $equipe04, "2009");
 $transfert08 = new Mercato($joueur02, $equipe05, "2021");
+$transfert09 = new Mercato($joueur15, $equipe05, "2019");
 
 
 ?>
@@ -352,7 +357,42 @@ $transfert08 = new Mercato($joueur02, $equipe05, "2021");
             </div>
 
         </div>
+        
+        <div class="joueur-box">
 
+            <div class="photojoueur-box">
+
+                <img src="/Annexe/IMG/joueur/E_Hazard.png" class="photo-joueur" alt="photo Eden Hazard">
+
+            </div>
+
+            <div class="joueurrecap-box">
+
+                <?php
+                    $joueur15 -> afficherRecapJoueur();
+                ?>
+
+            </div>
+
+        </div>
+
+        <div class="joueur-box">
+
+            <div class="photojoueur-box">
+
+                <img src="/Annexe/IMG/joueur/E_Haaland.png" class="photo-joueur" alt="photo Erling Haaland">
+
+            </div>
+
+            <div class="joueurrecap-box">
+
+                <?php
+                    $joueur13 -> afficherRecapJoueur();
+                ?>
+
+            </div>
+
+        </div>
     </div>
 
 
