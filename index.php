@@ -299,7 +299,7 @@ $transfert09 = new Mercato($joueur15, $equipe05, "2019");
                 </div>
 
             </a>
-
+            
             <div class="joueurrecap-box">
 
                 <?php
@@ -312,11 +312,15 @@ $transfert09 = new Mercato($joueur15, $equipe05, "2019");
         
         <div class="joueur-box">
 
-            <div class="photojoueur-box">
+            <a href="https://fr.wikipedia.org/wiki/Lucas_Hernandez" target="_blank">
 
-                <img src="/Annexe/IMG/joueur/L_Hernandez.png" class="photo-joueur" alt="photo kylian Mbappe">
+                <div class="photojoueur-box">
 
-            </div>
+                    <img src="/Annexe/IMG/joueur/L_Hernandez.png" class="photo-joueur" alt="photo kylian Mbappe">
+
+                </div>
+
+            </a>
 
             <div class="joueurrecap-box">
 
@@ -330,14 +334,18 @@ $transfert09 = new Mercato($joueur15, $equipe05, "2019");
 
         <div class="joueur-box">
 
-            <div class="photojoueur-box">
-
-                <img src="/Annexe/IMG/joueur/K_Benzema.png" class="photo-joueur" alt="photo karim benzema">
-
-            </div>
-
+            <a href="https://fr.wikipedia.org/wiki/Karim_Benzema" target="_blank">
+                
+                <div class="photojoueur-box">
+                    
+                    <img src="/Annexe/IMG/joueur/K_Benzema.png" class="photo-joueur" alt="photo karim benzema">
+                    
+                </div>
+                
+            </a>
+            
             <div class="joueurrecap-box">
-
+                
                 <?php
                     $joueur14 -> afficherRecapJoueur();
                 ?>
@@ -345,50 +353,65 @@ $transfert09 = new Mercato($joueur15, $equipe05, "2019");
             </div>
 
         </div>
-        
+
         <div class="joueur-box">
-
-            <div class="photojoueur-box">
-
-                <img src="/Annexe/IMG/joueur/C_Ronaldo.png" class="photo-joueur" alt="photo christiano ronaldo">
-
-            </div>
+    
+            <a href="https://fr.wikipedia.org/wiki/Cristiano_Ronaldo" target="_blank">
+                
+                <div class="photojoueur-box">
+                    
+                    <img src="/Annexe/IMG/joueur/C_Ronaldo.png" class="photo-joueur" alt="photo christiano ronaldo">
+                    
+                </div>
+                
+            </a>
 
             <div class="joueurrecap-box">
-
+                
                 <?php
+
                     $joueur02 -> afficherRecapJoueur();
+
                 ?>
 
             </div>
-
+            
         </div>
-        
+
         <div class="joueur-box">
-
-            <div class="photojoueur-box">
-
-                <img src="/Annexe/IMG/joueur/E_Hazard.png" class="photo-joueur" alt="photo Eden Hazard">
-
-            </div>
-
+    
+            <a href="https://fr.wikipedia.org/wiki/Eden_Hazard" target="_blank">
+                
+                <div class="photojoueur-box">
+                    
+                    <img src="/Annexe/IMG/joueur/E_Hazard.png" class="photo-joueur" alt="photo Eden Hazard">
+                    
+                </div>
+                
+            </a>
+            
             <div class="joueurrecap-box">
-
+                
                 <?php
                     $joueur15 -> afficherRecapJoueur();
                 ?>
 
             </div>
-
+        
         </div>
 
+
         <div class="joueur-box">
+    
+            <a href="https://fr.wikipedia.org/wiki/Erling_Haaland" target="_blank">
 
-            <div class="photojoueur-box">
+                <div class="photojoueur-box">
 
-                <img src="/Annexe/IMG/joueur/E_Haaland.png" class="photo-joueur" alt="photo Erling Haaland">
+                    <img src="/Annexe/IMG/joueur/E_Haaland.png" class="photo-joueur" alt="photo Erling Haaland">
 
-            </div>
+                </div>
+
+            </a>
 
             <div class="joueurrecap-box">
 
@@ -399,8 +422,8 @@ $transfert09 = new Mercato($joueur15, $equipe05, "2019");
             </div>
 
         </div>
-    </div>
 
+    </div>
 
 </div>
     
